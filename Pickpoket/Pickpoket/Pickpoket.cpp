@@ -4,13 +4,13 @@ using namespace std;
 
 struct thief
 {
-	int height;
+	int height = 0;
 	string eyeColor;
 	string hairColor;
-	int downloadedPunishment;
+	int downloadedPunishment = 0;
 };
 
-int machCount(thief t1, thief t2)
+int matchCount(thief t1, thief t2)
 {
 	int result = 0;
 	if (t1.height == t2.height) { ++result; }
@@ -38,7 +38,7 @@ int main()
 		int j = i + 1;
 		while (j < n && !found)
 		{
-			if (machCount(thiefs[i], thiefs[j]) > 1)
+			if (matchCount(thiefs[i], thiefs[j]) > 1)
 			{
 				found = true;
 			}
@@ -46,6 +46,6 @@ int main()
 		}
 		++i;
 	}
-	cout <<(found ? "IGEN" : "NEM");
+	cout << (found ? "IGEN" : "NEM");
 }
 
