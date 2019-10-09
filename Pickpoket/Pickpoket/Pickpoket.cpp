@@ -7,7 +7,7 @@ struct thief
 	int height = 0;
 	string eyeColor;
 	string hairColor;
-	int downloadedPunishment = 0;
+	int spentPunishment = 0;
 };
 
 int matchCount(thief t1, thief t2)
@@ -16,7 +16,7 @@ int matchCount(thief t1, thief t2)
 	if (t1.height == t2.height) { ++result; }
 	if (t1.eyeColor == t2.eyeColor) { ++result; }
 	if (t1.hairColor == t2.hairColor) { ++result; }
-	if (t1.downloadedPunishment == t2.downloadedPunishment) { ++result; }
+	if (t1.spentPunishment == t2.spentPunishment) { ++result; }
 	return result;
 }
 
@@ -29,7 +29,7 @@ int main()
 	cin >> n;
 	for (int i = 0; i < n; ++i)
 	{
-		cin >> thiefs[i].height >> thiefs[i].eyeColor >> thiefs[i].hairColor >> thiefs[i].downloadedPunishment;
+		cin >> thiefs[i].height >> thiefs[i].eyeColor >> thiefs[i].hairColor >> thiefs[i].spentPunishment;
 	}
 	int i = 0;
 	bool found = false;
